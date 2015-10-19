@@ -10,7 +10,11 @@
         android:id="@+id/map"
         tools:context="com.example.karlmosenbacher.eurotrip.GameActivity"
         android:name="com.google.android.gms.maps.SupportMapFragment" />
-    
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/header_view"/>
 </RelativeLayout>
 
 
