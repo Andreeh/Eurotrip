@@ -15,7 +15,7 @@ public class TimerService extends Service {
     public static final String TIMER_BR = "com.example.karlmosenbacher.eurotrip.timer_br";
     Intent broadcastIntent = new Intent(TIMER_BR);
     CountDownTimer countDownTimer = null;
-    static final int startTime = 900000;
+    static final int startTime = 901000;
 
     @Override
     public void onCreate() {
@@ -23,7 +23,6 @@ public class TimerService extends Service {
         countDownTimer = new CountDownTimer(startTime, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-//                Log.i(TAG, "Seconds remaining: " + millisUntilFinished / 1000);
                 broadcastIntent.putExtra("countdown", millisUntilFinished);
                 sendBroadcast(broadcastIntent);
             }
